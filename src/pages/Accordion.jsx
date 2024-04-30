@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { accordionData } from '@/features/Accordion/data';
+import { accordionData } from '@/constants/accordion-data';
 import { ExpandIcon, Info } from 'lucide-react';
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';

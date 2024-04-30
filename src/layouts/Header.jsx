@@ -16,6 +16,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 import MenuItem from './components/MenuItem';
 import SidebarFooter from './components/SidebarFooter';
+import { ModeToggle } from './components/ModeToggle';
 
 const Header = () => {
   return (
@@ -48,6 +49,7 @@ const Header = () => {
         <h1>Learning React Projects</h1>
       </div>
       {/* TODO: User Menu */}
+      <ModeToggle />
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant='secondary' size='icon' className='rounded-full'>

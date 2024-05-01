@@ -26,8 +26,8 @@ const Sidebar = () => {
           </nav>
         </div>
         {/* SIDEBAR FOOTER */}
-        <div className='mt-auto p-4'>
-        <SidebarFooter/>
+        <div className='flex-none p-4'>
+        {/* <SidebarFooter/> */}
         </div>
       </div>
     </div>

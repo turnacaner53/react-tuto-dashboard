@@ -28,52 +28,56 @@ const Accordion = () => {
   };
 
   const handleExpandAll = () => {
-    setMultiSelect(true)
+    setMultiSelect(true);
     setMutliple(accordionData.map((item) => item.id));
   };
 
   return (
-    <div className='flex h-full max-h-screen items-center justify-center flex-col mt-2'>
-      <div className='flex gap-2'>
-        <Button
-          variant={multiSelect ? 'default' : 'outline'}
-          onClick={() => {
-            setMultiSelect(!multiSelect);
-            setSelected(null);
-            setMutliple([]);
-          }}
-          className='mb-6'>
-          {multiSelect ? 'Disable' : 'Enable'} Multi Select
-        </Button>
-        <Button
-          onClick={() => handleExpandAll()}
-          variant='outline'
-          size='icon'>
-          <ExpandIcon className='h-4 w-4' />
-        </Button>
+    <div className='mt-2 flex max-h-full flex-col items-center justify-center'>
+      <div className='flex-none'>
+        <div className='flex gap-2'>
+          <Button
+            variant={multiSelect ? 'default' : 'outline'}
+            onClick={() => {
+              setMultiSelect(!multiSelect);
+              setSelected(null);
+              setMutliple([]);
+            }}
+            className='mb-6'>
+            {multiSelect ? 'Disable' : 'Enable'} Multi Select
+          </Button>
+          <Button
+            onClick={() => handleExpandAll()}
+            variant='outline'
+            size='icon'>
+            <ExpandIcon className='h-4 w-4' />
+          </Button>
+        </div>
       </div>
-      {accordionData && accordionData.length > 0 ? (
-        accordionData.map((item) => (
-          <div
-            key={item.id}
-            className='w-96 p-4 border border-gray-300 bg-gray-200 dark:bg-slate-900 rounded-lg shadow-lg mb-4'>
+      <div className='mb-4 w-96 grow'>
+        {accordionData && accordionData.length > 0 ? (
+          accordionData.map((item) => (
             <div
-              className='flex justify-between items-center cursor-pointer'
-              onClick={
-                multiSelect ? () => handleMultiSelect(item.id) : () => handleSingleSelect(item.id)
-              }>
-              <h3 className='text-lg font-semibold'>{item.question}</h3>
-              <span>{selected === item.id ? '-' : '+'}</span>
+              key={item.id}
+              className=' mb-4 rounded-lg border border-gray-300 bg-gray-200 p-4 shadow-lg dark:bg-slate-900'>
+              <div
+                className='flex cursor-pointer items-center justify-between'
+                onClick={
+                  multiSelect ? () => handleMultiSelect(item.id) : () => handleSingleSelect(item.id)
+                }>
+                <h3 className='text-lg font-semibold'>{item.question}</h3>
+                <span>{selected === item.id ? '-' : '+'}</span>
+              </div>
+              {selected === item.id || mutliple.includes(item.id) ? (
+                <p className='mt-2'>{item.answer}</p>
+              ) : null}
             </div>
-            {selected === item.id || mutliple.includes(item.id) ? (
-              <p className='mt-2'>{item.answer}</p>
-            ) : null}
-          </div>
-        ))
-      ) : (
-        <p>No data found</p>
-      )}
-      <div className='mt-auto'>
+          ))
+        ) : (
+          <p>No data found</p>
+        )}
+      </div>
+      <div className='flex-none'>
         <Alert variant='primary'>
           <Info className='h-5 w-5' />
           <AlertTitle>Accordion Example</AlertTitle>

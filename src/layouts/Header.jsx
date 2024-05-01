@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { SIDEBAR_NAV } from '@/routes/sidebar-nav';
@@ -15,13 +16,14 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 import MenuItem from './components/MenuItem';
-import SidebarFooter from './components/SidebarFooter';
 import { ModeToggle } from './components/ModeToggle';
+import SidebarFooter from './components/SidebarFooter';
 
 const Header = () => {
+  const [sheetOpen, setSheetOpen] = useState(false);
   return (
     <header className='flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6'>
-      <Sheet>
+      <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
         <SheetTrigger asChild>
           <Button variant='outline' size='icon' className='shrink-0 md:hidden'>
             <Menu className='h-5 w-5' />
@@ -36,7 +38,13 @@ const Header = () => {
             </Link>
             <div className='mt-2'>
               {SIDEBAR_NAV.map((item, index) => (
-                <MenuItem key={index} path={item.path} icon={item.icon} label={item.label} />
+                <MenuItem
+                  onClick={() => setSheetOpen(false)}
+                  key={index}
+                  path={item.path}
+                  icon={item.icon}
+                  label={item.label}
+                />
               ))}
             </div>
           </nav>

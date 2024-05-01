@@ -5,7 +5,7 @@ module.exports = {
   singleQuote: true,
   jsxSingleQuote: true,
   printWidth: 100,
-  singleAttributePerLine: true,
+  singleAttributePerLine: false,
   bracketSameLine: true,
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,

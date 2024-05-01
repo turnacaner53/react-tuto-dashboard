@@ -45,13 +45,13 @@ const MoreData = () => {
 
   return (
     <div className='container flex flex-col'>
-      <div className='grid grid-cols-2 lg:grid-cols-4'>
+      <div className='grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
         {products.map((product) => (
           <Card
             className='m-2 rounded-md border border-gray-300 shadow-sm hover:shadow-md dark:border-gray-600'
             key={product.id}>
             <CardHeader>
-              <CardTitle className='font-semibold'>{product.title}</CardTitle>
+              <CardTitle className='font-semibold '>{product.title}</CardTitle>
             </CardHeader>
             <CardContent>
               <img

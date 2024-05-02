@@ -7,6 +7,7 @@ import Accordion from '@/pages/Accordion';
 import RandomColor from '@/pages/RandomColor';
 import MoreData from '@/pages/MoreData';
 import QRCodeGenerate from '@/pages/QRCodeGenerate';
+import ScrollIndicator from '@/pages/ScrollIndicator';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
          <Route path='random-color' element={<RandomColor />} />
          <Route path='more-data' element={<MoreData />} />
          <Route path='qr-code' element={<QRCodeGenerate />} />
+         <Route path='scroll-indicator' element={<ScrollIndicator />} />
         <Route path='test' element={<Test />} />
       </Route>
     </>,

@@ -65,7 +65,7 @@ const ScrollIndicator = () => {
           <div className='w-4 bg-violet-700' style={{ height: `${scrollPercentage}%` }}></div>
         </div>
       </div>
-      <p className='fixed bottom-5 right-12'>
+      <p className='fixed bottom-5 right-12 rounded-md bg-gray-300 p-1 px-2 dark:bg-gray-800'>
         Scroll percentage:{' '}
         {scrollPercentage && scrollPercentage !== undefined ? (
           <span className='font-bold text-red-600'>{Math.round(scrollPercentage)}</span>

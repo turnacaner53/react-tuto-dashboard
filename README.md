@@ -8,6 +8,7 @@ Some of the plugins that are used for this project listed below.
     <li>Vite</li>
     <li>Tailwind</li>
     <li>Shadcn</li>
+    <li>QrCode</li>
 </ul>
 
 ### How to run

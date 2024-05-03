@@ -9,6 +9,7 @@ import MoreData from '@/pages/MoreData';
 import QRCodeGenerate from '@/pages/QRCodeGenerate';
 import ScrollIndicator from '@/pages/ScrollIndicator';
 import DynamicTabs from '@/pages/DynamicTabs';
+import FindGithub from '@/pages/FindGithub';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
          <Route path='qr-code' element={<QRCodeGenerate />} />
          <Route path='scroll-indicator' element={<ScrollIndicator />} />
          <Route path='dynamic-tabs' element={<DynamicTabs />} />
+         <Route path='find-github' element={<FindGithub />} />
         <Route path='test' element={<Test />} />
       </Route>
     </>,

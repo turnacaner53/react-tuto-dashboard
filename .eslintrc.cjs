@@ -6,6 +6,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
     'prettier',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js', 'tailwind.config.js'],
@@ -17,5 +18,8 @@ module.exports = {
     'react/prop-types': 'off',
     'no-unused-vars': 'warn',
     'no-inline-styles': 'off',
+    '@tanstack/query/exhaustive-deps': 'error',
+    '@tanstack/query/no-rest-destructuring': 'warn',
+    '@tanstack/query/stable-query-client': 'error',
   },
 };

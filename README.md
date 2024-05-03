@@ -9,6 +9,7 @@ Some of the plugins that are used for this project listed below.
     <li>Tailwind</li>
     <li>Shadcn</li>
     <li>QrCode</li>
+    <li>Tanstack Query (React Query)</li>
 </ul>
 
 ### How to run

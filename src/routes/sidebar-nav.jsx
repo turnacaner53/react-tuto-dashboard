@@ -1,4 +1,4 @@
-import { Database, Home, Layers, Palette, QrCode, ScrollIcon, TestTube } from 'lucide-react';
+import { Database, Home, Layers, NotebookTabs, Palette, QrCode, ScrollIcon, TestTube } from 'lucide-react';
 
 export const SIDEBAR_NAV = [
   { path: '/', label: 'Home', icon: <Home /> },
@@ -7,5 +7,6 @@ export const SIDEBAR_NAV = [
   { path: '/more-data', label: 'More Data', icon: <Database /> },
   { path: '/qr-code', label: 'QR-Code', icon: <QrCode /> },
   { path: '/scroll-indicator', label: 'Scroll Indicator', icon: <ScrollIcon /> },
+  { path: '/dynamic-tabs', label: 'Dynamic Tabs', icon: <NotebookTabs /> },
   { path: '/test', label: 'Test', icon: <TestTube /> },
 ];

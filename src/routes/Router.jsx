@@ -8,6 +8,7 @@ import RandomColor from '@/pages/RandomColor';
 import MoreData from '@/pages/MoreData';
 import QRCodeGenerate from '@/pages/QRCodeGenerate';
 import ScrollIndicator from '@/pages/ScrollIndicator';
+import DynamicTabs from '@/pages/DynamicTabs';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
          <Route path='more-data' element={<MoreData />} />
          <Route path='qr-code' element={<QRCodeGenerate />} />
          <Route path='scroll-indicator' element={<ScrollIndicator />} />
+         <Route path='dynamic-tabs' element={<DynamicTabs />} />
         <Route path='test' element={<Test />} />
       </Route>
     </>,

@@ -18,30 +18,31 @@ const FindGithub = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearch(username);
-    console.log('submit');
   };
 
   return (
-    <div className='grid items-center justify-center gap-4'>
+    <div className='container flex flex-col justify-center gap-4'>
       <h2 className='mb-4 mt-2 text-3xl font-semibold'>Simple Github User Search</h2>
-      <div className='flex gap-2'>
-        <Input
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          name='search'
-          placeholder='Search Github username'
-          className=''
-        />
-        <Button className='px-4' onClick={handleSubmit}>
-          Search
-        </Button>
-      </div>
+      <form action=''>
+        <div className='flex gap-2'>
+          <Input
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            name='search'
+            placeholder='Search Github username'
+            className='w-min'
+          />
+          <Button className='px-4' onClick={handleSubmit}>
+            Search
+          </Button>
+        </div>
+      </form>
       {isLoading && <Spinner />}
       {isError ? (
         <Alert variant='destructive'>Error Message : {error.message}</Alert>
       ) : (
         <div className='py-4 shadow-md'>
-          <Card className='w-full'>
+          <Card className='w-full md:w-[80%] lg:w-[60%]'>
             <CardHeader>
               <div className='flex gap-6'>
                 <img

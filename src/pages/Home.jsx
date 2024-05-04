@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import Modal from '@/components/modal/Modal';
 import Rating from '@/components/star-rating/Rating';
-import PropTypes from 'prop-types';
 
 import { Button } from '@/components/ui/button';
+import SearchUsers from '@/features/users-search/SearchUsers';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -18,10 +18,9 @@ const Home = () => {
           {showModal && <Modal onClose={() => setShowModal(false)} />}
         </div>
       </div>
+      <SearchUsers />
     </>
   );
 };
-
-Home.propTypes = {};
 
 export default Home;

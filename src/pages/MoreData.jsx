@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import ScrollTop from '@/components/scroll-top/ScrollTop';
 
 const MoreData = () => {
   const [loading, setLoading] = useState(false);
@@ -75,6 +76,7 @@ const MoreData = () => {
         className='mb-2 mt-4'>
         {disabled ? 'You reached 100 products' : 'Load More Data'}
       </Button>
+      <ScrollTop />
     </div>
   );
 };

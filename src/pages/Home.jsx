@@ -12,8 +12,8 @@ const Home = () => {
 
   const {data , error, pending} = useFetch({url: 'https://jsonplaceholder.typicode.com/users'});
   
-  console.log(data, error, pending);
-  
+  // console.log(data, error, pending);
+
   return (
     <>
       <div className='flex flex-col items-center gap-4'>

@@ -31,11 +31,11 @@ const Header = () => {
           </Button>
         </SheetTrigger>
         <SheetContent side='left' className='flex flex-col'>
-          <nav className='grid gap-2 text-lg font-medium'>
             <Link href='/' className='flex items-center gap-4 text-lg font-semibold'>
               <Package2 className='h-6 w-6' />
               <span>React</span>
             </Link>
+          <nav className='grid gap-2 text-lg font-medium overflow-auto no-scrollbar'>
             <div className='mt-2'>
               {SIDEBAR_NAV.map((item, index) => (
                 <MenuItem

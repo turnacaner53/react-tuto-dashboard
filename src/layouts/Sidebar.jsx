@@ -18,7 +18,7 @@ const Sidebar = () => {
           </Link>
         </div>
         {/* SIDEBAR NAVLINKS */}
-        <div className='flex-1 overflow-y-hidden hover:overflow-y-scroll'>
+        <div className='flex-1 overflow-y-hidden hover:overflow-y-auto'>
           <nav className='grid items-start px-2 text-sm font-medium lg:px-4'>
             {SIDEBAR_NAV.map((item, index) => (
               <MenuItem key={index} path={item.path} icon={item.icon} label={item.label} />
@@ -27,7 +27,7 @@ const Sidebar = () => {
         </div>
         {/* SIDEBAR FOOTER */}
         <div className='flex-none p-4'>
-        <SidebarFooter/>
+          <SidebarFooter />
         </div>
       </div>
     </div>

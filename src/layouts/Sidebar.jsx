@@ -27,7 +27,7 @@ const Sidebar = () => {
         </div>
         {/* SIDEBAR FOOTER */}
         <div className='flex-none p-4'>
-        {/* <SidebarFooter/> */}
+        <SidebarFooter/>
         </div>
       </div>
     </div>

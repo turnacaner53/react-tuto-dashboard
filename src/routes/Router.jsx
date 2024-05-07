@@ -11,6 +11,7 @@ import RandomColor from '@/pages/RandomColor';
 import ScrollIndicator from '@/pages/ScrollIndicator';
 import Test from '@/pages/Test';
 import TicTacToe from '@/pages/TicTacToe';
+import Weather from '@/pages/Weather';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
         <Route path='dynamic-tabs' element={<DynamicTabs />} />
         <Route path='find-github' element={<FindGithub />} />
         <Route path='tictactoe' element={<TicTacToe />} />
+        <Route path='weather' element={<Weather />} />
         <Route path='test' element={<Test />} />
       </Route>
     </>,

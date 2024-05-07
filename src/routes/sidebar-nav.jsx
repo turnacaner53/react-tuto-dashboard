@@ -1,4 +1,5 @@
 import {
+  CloudHail,
   Database,
   Gamepad2,
   Github,
@@ -19,5 +20,6 @@ export const SIDEBAR_NAV = [
   { path: '/scroll-indicator', label: 'Scroll Indicator', icon: <ScrollIcon /> },
   { path: '/find-github', label: 'Find Github', icon: <Github /> },
   { path: '/tictactoe', label: 'Tic Tac Toe', icon: <Gamepad2 /> },
-  { path: '/test', label: 'Test', icon: <TestTube /> },
+  { path: '/weather', label: 'Weather App', icon: <CloudHail /> },
+  // { path: '/test', label: 'Test', icon: <TestTube /> },
 ];

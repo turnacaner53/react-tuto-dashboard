@@ -1,5 +1,6 @@
 import {
   CloudHail,
+  CookingPot,
   Database,
   Gamepad2,
   Github,
@@ -21,5 +22,6 @@ export const SIDEBAR_NAV = [
   { path: '/find-github', label: 'Find Github', icon: <Github /> },
   { path: '/tictactoe', label: 'Tic Tac Toe', icon: <Gamepad2 /> },
   { path: '/weather', label: 'Weather App', icon: <CloudHail /> },
+  { path: '/foot-recipes', label: 'Foot Recipe App', icon: <CookingPot /> },
   // { path: '/test', label: 'Test', icon: <TestTube /> },
 ];

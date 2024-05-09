@@ -12,6 +12,10 @@ import ScrollIndicator from '@/pages/ScrollIndicator';
 import Test from '@/pages/Test';
 import TicTacToe from '@/pages/TicTacToe';
 import Weather from '@/pages/Weather';
+import FootDetails from '@/pages/foot-recipe/FootDetails';
+import FootFavourites from '@/pages/foot-recipe/FootFavourites';
+import FootLayout from '@/pages/foot-recipe/FootLayout';
+import FootRecipes from '@/pages/foot-recipe/FootRecipes';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +31,11 @@ const router = createBrowserRouter(
         <Route path='find-github' element={<FindGithub />} />
         <Route path='tictactoe' element={<TicTacToe />} />
         <Route path='weather' element={<Weather />} />
+        <Route path='foot-recipes' element={<FootLayout />}>
+          <Route index element={<FootRecipes />} />
+          <Route path='favourites' element={<FootFavourites />} />
+          <Route path='details/:id' element={<FootDetails />} />
+        </Route>
         <Route path='test' element={<Test />} />
       </Route>
     </>,

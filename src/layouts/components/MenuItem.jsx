@@ -6,7 +6,7 @@ import { ChevronDown } from 'lucide-react';
 import PropTypes from 'prop-types';
 
 const MenuItem = ({ item, sheetOnClick }) => {
-  const [subMenuOpen, setSubMenuOpen] = useState(true);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
   const { pathname } = useLocation();
   const isActive = pathname === item.path;
 

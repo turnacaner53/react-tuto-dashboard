@@ -31,20 +31,14 @@ const Header = () => {
           </Button>
         </SheetTrigger>
         <SheetContent side='left' className='flex flex-col'>
-            <Link href='/' className='flex items-center gap-4 text-lg font-semibold'>
-              <Package2 className='h-6 w-6' />
-              <span>React</span>
-            </Link>
-          <nav className='grid gap-2 text-lg font-medium overflow-auto no-scrollbar'>
+          <Link href='/' className='flex items-center gap-4 text-lg font-semibold'>
+            <Package2 className='h-6 w-6' />
+            <span>React</span>
+          </Link>
+          <nav className='no-scrollbar grid gap-2 overflow-auto text-lg font-medium'>
             <div className='mt-2'>
               {SIDEBAR_NAV.map((item, index) => (
-                <MenuItem
-                  onClick={() => setSheetOpen(false)}
-                  key={index}
-                  path={item.path}
-                  icon={item.icon}
-                  label={item.label}
-                />
+                <MenuItem key={index} item={item} sheetOnClick={() => setSheetOpen(false)} />
               ))}
             </div>
           </nav>

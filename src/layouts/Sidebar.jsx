@@ -21,7 +21,7 @@ const Sidebar = () => {
         <div className='flex-1 overflow-y-hidden hover:overflow-y-auto'>
           <nav className='grid items-start px-2 text-sm font-medium lg:px-4'>
             {SIDEBAR_NAV.map((item, index) => (
-              <MenuItem key={index} path={item.path} icon={item.icon} label={item.label} />
+              <MenuItem key={index} item={item} />
             ))}
           </nav>
         </div>

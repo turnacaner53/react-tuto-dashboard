@@ -16,6 +16,9 @@ import FootDetails from '@/pages/foot-recipe/FootDetails';
 import FootFavourites from '@/pages/foot-recipe/FootFavourites';
 import FootLayout from '@/pages/foot-recipe/FootLayout';
 import FootRecipes from '@/pages/foot-recipe/FootRecipes';
+import Cart from '@/pages/shopping/Cart';
+import ShoppingHome from '@/pages/shopping/ShoppingHome';
+import ShoppingLayout from '@/pages/shopping/ShoppingLayout';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +38,10 @@ const router = createBrowserRouter(
           <Route index element={<FootRecipes />} />
           <Route path='favourites' element={<FootFavourites />} />
           <Route path='details/:id' element={<FootDetails />} />
+        </Route>
+        <Route path='shopping' element={<ShoppingLayout />}>
+          <Route index element={<ShoppingHome />} />
+          <Route path='cart' element={<Cart />} />
         </Route>
         <Route path='test' element={<Test />} />
       </Route>

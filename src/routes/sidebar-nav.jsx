@@ -9,6 +9,7 @@ import {
   Palette,
   QrCode,
   ScrollIcon,
+  ShoppingBag,
   TestTube,
 } from 'lucide-react';
 
@@ -29,6 +30,7 @@ export const SIDEBAR_NAV = [
     subMenu: true,
     subMenuItems: [{ path: '/foot-recipes/favourites', label: 'Favourites', icon: <CookingPot /> }],
   },
+  { path: '/shopping', label: 'Shopping', icon: <ShoppingBag />, subMenu: false},
 
   // {
   //   path: '/test',

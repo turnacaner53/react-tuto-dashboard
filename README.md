@@ -10,6 +10,9 @@ Some of the plugins that are used for this project listed below.
     <li>Shadcn</li>
     <li>QrCode</li>
     <li>Tanstack Query (React Query)</li>
+    <li>React Hook Form</li>
+    <li>Zod (form validation)</li>
+    <li>Apex Charts</li>
 </ul>
 
 ### How to run

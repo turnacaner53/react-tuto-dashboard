@@ -10,7 +10,7 @@ import {
   QrCode,
   ScrollIcon,
   ShoppingBag,
-  TestTube,
+  Wallet2,
 } from 'lucide-react';
 
 export const SIDEBAR_NAV = [
@@ -31,14 +31,5 @@ export const SIDEBAR_NAV = [
     subMenuItems: [{ path: '/foot-recipes/favourites', label: 'Favourites', icon: <CookingPot /> }],
   },
   { path: '/shopping', label: 'Shopping', icon: <ShoppingBag />, subMenu: false},
-
-  // {
-  //   path: '/test',
-  //   label: 'Test',
-  //   icon: <TestTube />,
-  //   subMenu: true,
-  //   subMenuItems: [
-  //     { path: '/test', label: 'Test 1', icon: <TestTube /> },
-  //   ],
-  // },
+  { path: '/my-wallet', label: 'My Wallet', icon: <Wallet2 />},
 ];

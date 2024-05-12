@@ -19,6 +19,7 @@ import FootRecipes from '@/pages/foot-recipe/FootRecipes';
 import Cart from '@/pages/shopping/Cart';
 import ShoppingHome from '@/pages/shopping/ShoppingHome';
 import ShoppingLayout from '@/pages/shopping/ShoppingLayout';
+import MyWallet from '@/pages/MyWallet';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -43,6 +44,7 @@ const router = createBrowserRouter(
           <Route index element={<ShoppingHome />} />
           <Route path='cart' element={<Cart />} />
         </Route>
+        <Route path='my-wallet' element={<MyWallet />} />
         <Route path='test' element={<Test />} />
       </Route>
     </>,

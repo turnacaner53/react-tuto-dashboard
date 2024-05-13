@@ -37,7 +37,7 @@ const BlogForm = () => {
 
   const form = useForm({
     resolver: zodResolver(formSchema),
-    values: isUpdate ? blog : {},
+    defaultValues: isUpdate ? blog : {},
   });
 
   const { control, handleSubmit, reset } = form;

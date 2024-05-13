@@ -20,7 +20,6 @@ const RandomColor = () => {
       hexColor += hex[randomColor(hex.length)];
     }
 
-    console.log(hexColor);
     setColor(() => hexColor);
   };
 
@@ -49,14 +48,10 @@ const RandomColor = () => {
       <div
         style={{ backgroundColor: color }}
         className={`flex h-[500px] w-[95%] flex-col items-center justify-center gap-8 rounded-md border border-black dark:border-gray-200`}>
-        <p
-          style={{ color: color }}
-          className='py-2 text-center text-4xl font-bold invert'>
+        <p style={{ color: color }} className='py-2 text-center text-4xl font-bold invert'>
           Color Type: <span className='uppercase'>{typeOfColor}</span>
         </p>
-        <h2
-          style={{ color: color }}
-          className='py-2 text-center text-4xl font-bold invert'>
+        <h2 style={{ color: color }} className='py-2 text-center text-4xl font-bold invert'>
           Color: {color}
         </h2>
       </div>

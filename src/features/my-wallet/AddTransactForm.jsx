@@ -44,7 +44,6 @@ const AddTransactForm = ({ onClose }) => {
   });
 
   const onSubmit = () => {
-    console.log('form', form.getValues());
     addTransaction(form.getValues());
 
     //if submit success close the form

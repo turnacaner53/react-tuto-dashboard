@@ -6,12 +6,17 @@ import DynamicTabs from '@/pages/DynamicTabs';
 import FindGithub from '@/pages/FindGithub';
 import Home from '@/pages/Home';
 import MoreData from '@/pages/MoreData';
+import MyWallet from '@/pages/MyWallet';
 import QRCodeGenerate from '@/pages/QRCodeGenerate';
 import RandomColor from '@/pages/RandomColor';
 import ScrollIndicator from '@/pages/ScrollIndicator';
-import Test from '@/pages/Test';
 import TicTacToe from '@/pages/TicTacToe';
 import Weather from '@/pages/Weather';
+import BlogDetail from '@/pages/blog/BlogDetail';
+import BlogHome from '@/pages/blog/BlogHome';
+import BlogLayout from '@/pages/blog/BlogLayout';
+import NewBlog from '@/pages/blog/NewBlog';
+import UpdateBlog from '@/pages/blog/UpdateBlog';
 import FootDetails from '@/pages/foot-recipe/FootDetails';
 import FootFavourites from '@/pages/foot-recipe/FootFavourites';
 import FootLayout from '@/pages/foot-recipe/FootLayout';
@@ -19,7 +24,6 @@ import FootRecipes from '@/pages/foot-recipe/FootRecipes';
 import Cart from '@/pages/shopping/Cart';
 import ShoppingHome from '@/pages/shopping/ShoppingHome';
 import ShoppingLayout from '@/pages/shopping/ShoppingLayout';
-import MyWallet from '@/pages/MyWallet';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -45,7 +49,12 @@ const router = createBrowserRouter(
           <Route path='cart' element={<Cart />} />
         </Route>
         <Route path='my-wallet' element={<MyWallet />} />
-        <Route path='test' element={<Test />} />
+        <Route path='blog' element={<BlogLayout />}>
+          <Route index element={<BlogHome />} />
+          <Route path='new' element={<NewBlog />} />
+          <Route path='update/:id' element={<UpdateBlog />} />
+          <Route path='details/:id' element={<BlogDetail />} />
+        </Route>
       </Route>
     </>,
   ),

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 
+import ScrollTop from '@/components/scroll-top/ScrollTop';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import ScrollTop from '@/components/scroll-top/ScrollTop';
 
 const MoreData = () => {
   const [loading, setLoading] = useState(false);
@@ -21,8 +22,6 @@ const MoreData = () => {
       if (data && data.products && data.products.length > 0) {
         setProducts((prev) => [...prev, ...data.products]);
       }
-
-      console.log(data);
     } catch (error) {
       console.error(error);
     } finally {

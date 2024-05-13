@@ -41,7 +41,7 @@ const Weather = () => {
       </p>
       <Search search={search} setSearch={setSearch} onClick={handleSearch} />
 
-      <Card className='m-4 min-h-[100px] w-full border border-slate-300/90 bg-sky-700/70 dark:border-slate-700/60 md:w-[80%] lg:w-[60%] shadow-xl'>
+      <Card className='m-4 min-h-[100px] w-full border border-slate-300/90 bg-sky-700/70 shadow-xl dark:border-slate-700/60 md:w-[80%] lg:w-[60%]'>
         {isLoading ? (
           <SkeletonWeather />
         ) : (
@@ -73,7 +73,7 @@ const Weather = () => {
                 {data && (
                   <div className='flex flex-col gap-2'>
                     <p>{getCurrentDate()}</p>
-                    <p>Temperature: {Math.round((data.main.temp - 32) * (1 / 8))}°C</p>
+                    <p>Temperature: {Math.round(data.main?.temp)}°F</p>
                     <p>Humidity: {data.main.humidity}%</p>
                     <p>Wind: {data.wind.speed} m/s</p>
                   </div>

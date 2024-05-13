@@ -9,7 +9,7 @@ module.exports = {
     'plugin:@tanstack/eslint-plugin-query/recommended',
     'prettier',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js', 'tailwind.config.js'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js', 'tailwind.config.js', 'server'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],

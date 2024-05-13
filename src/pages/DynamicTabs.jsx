@@ -3,9 +3,7 @@ import { useState } from 'react';
 import TABS_CONTENT from '@/constants/tabs-content';
 
 const DynamicTabs = () => {
-  const handleChange = (index) => {
-    console.log('Tab index:', index);
-  };
+  const handleChange = (index) => {};
 
   return (
     <>

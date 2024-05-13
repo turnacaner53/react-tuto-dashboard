@@ -23,8 +23,6 @@ const Accordion = () => {
     else newSelected.splice(findIndex, 1);
 
     setMutliple(newSelected);
-
-    console.log(mutliple);
   };
 
   const handleExpandAll = () => {
@@ -46,10 +44,7 @@ const Accordion = () => {
             className='mb-6'>
             {multiSelect ? 'Disable' : 'Enable'} Multi Select
           </Button>
-          <Button
-            onClick={() => handleExpandAll()}
-            variant='outline'
-            size='icon'>
+          <Button onClick={() => handleExpandAll()} variant='outline' size='icon'>
             <ExpandIcon className='h-4 w-4' />
           </Button>
         </div>

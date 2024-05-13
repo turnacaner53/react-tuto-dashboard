@@ -29,7 +29,6 @@ const ScrollIndicator = () => {
     const height = scrollHeight - clientHeight;
 
     const percentage = (scrollTop / height) * 100;
-    console.log(percentage);
     setScrollPercentage(percentage);
   };
 

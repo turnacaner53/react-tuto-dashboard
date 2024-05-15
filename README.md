@@ -12,6 +12,8 @@ Some of the plugins that are used for this project listed below.
     <li>Shadcn</li>
     <li>QrCode</li>
     <li>Tanstack Query (React Query)</li>
+    <li>Zustand</li>
+    <li>Immer</li>
     <li>Axios</li>
     <li>React Hook Form</li>
     <li>Zod (form validation)</li>

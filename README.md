@@ -30,4 +30,4 @@ For the Blog App, you need to run **"npm install"** and **"npm start".** command
 
 ### Thanks
 
-Thanks to <a href='https://www.youtube.com/channel/UCuWZvXIeoDzZKCzpTuC5krQ/'>@sangammukherjee3009</a> for the inspiration. 
+Thanks to <a href='https://www.youtube.com/channel/UCuWZvXIeoDzZKCzpTuC5krQ/'>@sangammukherjee3009</a> for the inspiration.

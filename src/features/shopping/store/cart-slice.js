@@ -1,12 +1,3 @@
-const product = {
-  id: 0,
-  title: '',
-  price: 0,
-  description: '',
-  category: '',
-  image: '',
-};
-
 export const createCartSlice = (set, get) => ({
   products: [],
   total: 0,

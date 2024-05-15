@@ -24,6 +24,7 @@ import FootRecipes from '@/pages/foot-recipe/FootRecipes';
 import Cart from '@/pages/shopping/Cart';
 import ShoppingHome from '@/pages/shopping/ShoppingHome';
 import ShoppingLayout from '@/pages/shopping/ShoppingLayout';
+import NotFound from '@/pages/NotFound';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,6 +56,7 @@ const router = createBrowserRouter(
           <Route path='update/:id' element={<UpdateBlog />} />
           <Route path='details/:id' element={<BlogDetail />} />
         </Route>
+        <Route path='*' element={<NotFound />} />
       </Route>
     </>,
   ),

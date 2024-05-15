@@ -14,6 +14,11 @@ const MenuItem = ({ item, sheetOnClick }) => {
     setSubMenuOpen(!subMenuOpen);
   };
 
+  const mainLink = () => {
+    setSubMenuOpen(false);
+    sheetOnClick();
+  };
+
   return (
     <div>
       {item?.subMenu ? (
@@ -52,7 +57,7 @@ const MenuItem = ({ item, sheetOnClick }) => {
         </>
       ) : (
         <NavLink
-          onClick={sheetOnClick}
+          onClick={mainLink}
           to={item.path}
           className={cn(
             `flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary`,

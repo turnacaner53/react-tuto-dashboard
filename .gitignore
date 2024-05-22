@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 *.env
+web.config
 
 # Editor directories and files
 .vscode/*

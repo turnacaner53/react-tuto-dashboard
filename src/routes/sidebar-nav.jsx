@@ -11,12 +11,13 @@ import {
   QrCode,
   ScrollIcon,
   ShoppingBag,
+  TextCursorInput,
   Wallet2,
 } from 'lucide-react';
 
 export const SIDEBAR_NAV = [
-  { path: '/', label: 'Home', icon: <Home />, subMenu: false },
-  { path: '/shopping', label: 'Shopping', icon: <ShoppingBag />, subMenu: false },
+  { path: '/', label: 'Home', icon: <Home /> },
+  { path: '/shopping', label: 'Shopping', icon: <ShoppingBag /> },
   {
     path: '/foot-recipes',
     label: 'Foot Recipe App',
@@ -26,12 +27,13 @@ export const SIDEBAR_NAV = [
   },
   { path: '/blog', label: 'Blog', icon: <Paperclip /> },
   { path: '/my-wallet', label: 'My Wallet', icon: <Wallet2 /> },
-  { path: '/weather', label: 'Weather App', icon: <CloudHail />, subMenu: false },
-  { path: '/find-github', label: 'Find Github', icon: <Github />, subMenu: false },
-  { path: '/qr-code', label: 'QR-Code', icon: <QrCode />, subMenu: false },
-  { path: '/random-color', label: 'Random Color', icon: <Palette />, subMenu: false },
-  { path: '/more-data', label: 'More Data', icon: <Database />, subMenu: false },
-  { path: '/tictactoe', label: 'Tic Tac Toe', icon: <Gamepad2 />, subMenu: false },
-  { path: '/accordion', label: 'Accordion', icon: <Layers />, subMenu: false },
-  { path: '/scroll-indicator', label: 'Scroll Indicator', icon: <ScrollIcon />, subMenu: false },
+  {path: '/hook-form', label: 'Hook Form', icon: <TextCursorInput />},
+  { path: '/weather', label: 'Weather App', icon: <CloudHail /> },
+  { path: '/find-github', label: 'Find Github', icon: <Github /> },
+  { path: '/qr-code', label: 'QR-Code', icon: <QrCode /> },
+  { path: '/random-color', label: 'Random Color', icon: <Palette /> },
+  { path: '/more-data', label: 'More Data', icon: <Database /> },
+  { path: '/tictactoe', label: 'Tic Tac Toe', icon: <Gamepad2 /> },
+  { path: '/accordion', label: 'Accordion', icon: <Layers /> },
+  { path: '/scroll-indicator', label: 'Scroll Indicator', icon: <ScrollIcon /> },
 ];

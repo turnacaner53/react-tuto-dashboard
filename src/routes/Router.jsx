@@ -25,6 +25,8 @@ import Cart from '@/pages/shopping/Cart';
 import ShoppingHome from '@/pages/shopping/ShoppingHome';
 import ShoppingLayout from '@/pages/shopping/ShoppingLayout';
 import NotFound from '@/pages/NotFound';
+import HookFormLayout from '@/pages/hook-form/HookFormLayout';
+import HookFormHome from '@/pages/hook-form/HookFormHome';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,6 +57,9 @@ const router = createBrowserRouter(
           <Route path='new' element={<NewBlog />} />
           <Route path='update/:id' element={<UpdateBlog />} />
           <Route path='details/:id' element={<BlogDetail />} />
+        </Route>
+        <Route path='hook-form' element={<HookFormLayout />}>
+          <Route index element={<HookFormHome />} />
         </Route>
         <Route path='*' element={<NotFound />} />
       </Route>

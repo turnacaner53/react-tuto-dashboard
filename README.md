@@ -27,7 +27,3 @@ Some of the plugins that are used for this project listed below.
 After downloading the project run **"npm install"** after that **"npm start".**
 
 For the Blog App, you need to run **"npm install"** and **"npm start".** commands in the server folder. In addition, you need to make the necessary database installations for mongodb usage. For more instructions go to <a href='https://www.mongodb.com/'>MongoDb.</a>
-
-### Thanks
-
-Thanks to <a href='https://www.youtube.com/channel/UCuWZvXIeoDzZKCzpTuC5krQ/'>@sangammukherjee3009</a> for the inspiration.

@@ -1,4 +1,7 @@
+import React from 'react';
+
 import { cn } from '@/lib/utils';
+import { cva } from 'class-variance-authority';
 import { CheckIcon, ChevronDown, WandSparkles, XCircle, XIcon } from 'lucide-react';
 
 import { Badge } from '../ui/badge';
@@ -14,8 +17,6 @@ import {
 } from '../ui/command';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
 import { Separator } from '../ui/separator';
-import React from 'react';
-import { cva } from 'class-variance-authority';
 
 const multiSelectVariants = cva(
   'm-1 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300',
@@ -35,23 +36,6 @@ const multiSelectVariants = cva(
     },
   },
 );
-
-//   interface MultiSelectFormFieldProps
-//     extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-//       VariantProps<typeof multiSelectVariants> {
-//     asChild?: boolean;
-//     options: {
-//       label: string;
-//       value: string;
-//       icon?: React.ComponentType<{ className?: string }>;
-//     }[];
-//     defaultValue?: string[];
-//     disabled?: boolean;
-//     placeholder: string;
-//     className?: string;
-//     animation?: number;
-//     onValueChange: (value: string[]) => void;
-//   }
 
 const MultiSelect = React.forwardRef(
   (

@@ -28,7 +28,6 @@ const BlogForm = () => {
   const { id } = useParams();
   const { toast } = useToast();
   const navigate = useNavigate();
-
   const isUpdate = !!id;
 
   const { data: blog, isLoading, isError } = useGetBlog(id);
@@ -37,7 +36,7 @@ const BlogForm = () => {
 
   const form = useForm({
     resolver: zodResolver(formSchema),
-    defaultValues: isUpdate ? blog : {},
+    defaultValues: isUpdate ? blog : { title: '', content: '' },
   });
 
   const { control, handleSubmit, reset } = form;
@@ -46,16 +45,19 @@ const BlogForm = () => {
 
   const onSubmit = (data) => {
     if (isUpdate) {
-      updateBlog({ id, updatedBlog: data }, {
-        onSuccess: () => {
-          reset();
-          toast({
-            variant: 'success',
-            description: 'Blog updated successfully.',
-          });
-          navigate(`/blog/details/${id}`);
+      updateBlog(
+        { id, updatedBlog: data },
+        {
+          onSuccess: () => {
+            reset();
+            toast({
+              variant: 'success',
+              description: 'Blog updated successfully.',
+            });
+            navigate(`/blog/details/${id}`);
+          },
         },
-      });
+      );
     } else {
       createBlog(data, {
         onSuccess: () => {
@@ -95,7 +97,11 @@ const BlogForm = () => {
               <FormItem>
                 <FormLabel>Content</FormLabel>
                 <FormControl>
-                  <Textarea className='hover:resize-y h-64' placeholder='Enter content' {...field} />
+                  <Textarea
+                    className='h-64 hover:resize-y'
+                    placeholder='Enter content'
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

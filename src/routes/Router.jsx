@@ -7,6 +7,7 @@ import FindGithub from '@/pages/FindGithub';
 import Home from '@/pages/Home';
 import MoreData from '@/pages/MoreData';
 import MyWallet from '@/pages/MyWallet';
+import NotFound from '@/pages/NotFound';
 import QRCodeGenerate from '@/pages/QRCodeGenerate';
 import RandomColor from '@/pages/RandomColor';
 import ScrollIndicator from '@/pages/ScrollIndicator';
@@ -21,12 +22,10 @@ import FootDetails from '@/pages/foot-recipe/FootDetails';
 import FootFavourites from '@/pages/foot-recipe/FootFavourites';
 import FootLayout from '@/pages/foot-recipe/FootLayout';
 import FootRecipes from '@/pages/foot-recipe/FootRecipes';
+import HookFormHome from '@/pages/hook-form/HookFormHome';
 import Cart from '@/pages/shopping/Cart';
 import ShoppingHome from '@/pages/shopping/ShoppingHome';
 import ShoppingLayout from '@/pages/shopping/ShoppingLayout';
-import NotFound from '@/pages/NotFound';
-import HookFormLayout from '@/pages/hook-form/HookFormLayout';
-import HookFormHome from '@/pages/hook-form/HookFormHome';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -43,24 +42,22 @@ const router = createBrowserRouter(
         <Route path='tictactoe' element={<TicTacToe />} />
         <Route path='weather' element={<Weather />} />
         <Route path='foot-recipes' element={<FootLayout />}>
-          <Route index element={<FootRecipes />} />
+          <Route path='home' element={<FootRecipes />} />
           <Route path='favourites' element={<FootFavourites />} />
           <Route path='details/:id' element={<FootDetails />} />
         </Route>
         <Route path='shopping' element={<ShoppingLayout />}>
-          <Route index element={<ShoppingHome />} />
+          <Route path='home' element={<ShoppingHome />} />
           <Route path='cart' element={<Cart />} />
         </Route>
         <Route path='my-wallet' element={<MyWallet />} />
         <Route path='blog' element={<BlogLayout />}>
-          <Route index element={<BlogHome />} />
+          <Route path='home' element={<BlogHome />} />
           <Route path='new' element={<NewBlog />} />
           <Route path='update/:id' element={<UpdateBlog />} />
           <Route path='details/:id' element={<BlogDetail />} />
         </Route>
-        <Route path='hook-form' element={<HookFormLayout />}>
-          <Route index element={<HookFormHome />} />
-        </Route>
+        <Route path='hook-form' element={<HookFormHome />} />
         <Route path='*' element={<NotFound />} />
       </Route>
     </>,

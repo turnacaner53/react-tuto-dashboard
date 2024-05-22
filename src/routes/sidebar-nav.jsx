@@ -17,15 +17,15 @@ import {
 
 export const SIDEBAR_NAV = [
   { path: '/', label: 'Home', icon: <Home /> },
-  { path: '/shopping', label: 'Shopping', icon: <ShoppingBag /> },
+  { path: '/shopping/home', label: 'Shopping', icon: <ShoppingBag /> },
   {
-    path: '/foot-recipes',
+    path: '/foot-recipes/home',
     label: 'Foot Recipe App',
     icon: <CookingPot />,
     subMenu: true,
     subMenuItems: [{ path: '/foot-recipes/favourites', label: 'Favourites', icon: <CookingPot /> }],
   },
-  { path: '/blog', label: 'Blog', icon: <Paperclip /> },
+  { path: '/blog/home', label: 'Blog', icon: <Paperclip /> },
   { path: '/my-wallet', label: 'My Wallet', icon: <Wallet2 /> },
   {path: '/hook-form', label: 'Hook Form', icon: <TextCursorInput />},
   { path: '/weather', label: 'Weather App', icon: <CloudHail /> },
